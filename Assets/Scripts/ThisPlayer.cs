@@ -29,11 +29,11 @@ public class ThisPlayer: MonoBehaviour
     //check if the player can stomp or not
     Vector2 dashingDirection;
     //the value of how fast the player moves.
-    float moveSpeed = 14f;
+    float moveSpeed = 5.5f;
     //how fast the player jumps
     float jumpspeed = 5f;
     //the value of how fast the player slides off walls
-    float dashingSpeed = 15f;
+    float dashingSpeed = 8f;
     //the value of how high the player will jump when dashing into a wall
     //the direction a player will wallJump
     float jumpTime;
@@ -44,7 +44,7 @@ public class ThisPlayer: MonoBehaviour
     //the dash imput of the player, will be assigned later
     float dashImput;
     //how long the player can jump while pressing the jump button
-    float jumpButtonSpeed = 0.3f;
+    float jumpButtonSpeed = 0.2f;
 
     void Start()
     {
