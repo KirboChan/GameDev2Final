@@ -6,7 +6,7 @@ public class RetryZone : MonoBehaviour
 {
     public ThisPlayer player;
     public Transform respawnPoint;
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
