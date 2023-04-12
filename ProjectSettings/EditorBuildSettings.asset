@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scenes/Scene1.unity
     guid: cee976be4a2908249bad4ab88c68fb1b
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Adam.unity
+    guid: 84211c4d8d02d7d47b38868074123a25
+  - enabled: 1
+    path: Assets/Scenes/Scenes/knox_lvl.unity
+    guid: ac1d6c0542db53c429cd4301c0ec33b6
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Joseph.unity
+    guid: c25c92885e80c2d4db6af34d5842ae99
+  - enabled: 1
+    path: Assets/Scenes/Scenes/KameronsRoom.unity
+    guid: 167239fae252b3b46bc3d188c9334521
   m_configObjects: {}

@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ThisPlayer: MonoBehaviour
 {
     //welcome to the player script!
 
-
+    public string lastSceneName;
     //used to call the rigidbody, which is used for most of the physics of the player including gravity
     public Rigidbody2D rb;
     //uses a public variable to check whether the player is on the ground.
@@ -154,11 +155,29 @@ public class ThisPlayer: MonoBehaviour
         throw new NotImplementedException();
     }
 
+    void ReturnToMainMenu()
+    {
+        // Load the main menu scene
+        SceneManager.LoadScene("MainMenu");
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Spike"))
+        if (collision.gameObject.tag == "Spike")
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if (collision.gameObject.tag == "Goal")
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (currentScene.name == lastSceneName)
+            {
+                ReturnToMainMenu();
+            }
+
+           
         }
     }
 

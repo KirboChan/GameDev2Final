@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4117666628013122901}
   - component: {fileID: 4117666628013122906}
   - component: {fileID: 4117666628013122907}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8fc7abe788d42a46b6c76f29455efc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastSceneName: KameronsRoom
   rb: {fileID: 4117666628013122906}
   groundCheck: {fileID: 4117666628643221349}
   groundLayer:
@@ -164,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4117666628643221349}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GroundCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
