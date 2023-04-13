@@ -18,6 +18,7 @@ public class ThisPlayer: MonoBehaviour
     //checks whether the player is on the ground or not, use a check later.
     public bool isGrounded;
     public int facingDirection = 1;
+    public TrailRenderer moveTrail;
     //checks whether the player is doing a middair dash or not.
     public bool isDashing = false;
     //checks whether the player is stomping or not
@@ -52,6 +53,7 @@ public class ThisPlayer: MonoBehaviour
         //the framerate of the game, running at 60 fps
         Application.targetFrameRate = 60;
         //the player trail is set to false, and the ability to stomp is set to 
+        moveTrail.emitting = false;
     }
 
     void FixedUpdate()
@@ -80,6 +82,7 @@ public class ThisPlayer: MonoBehaviour
             {
                 //the velocity of the player will multiply the moveImput by the movespeed, while checking the y velocity
                 rb.velocity = new Vector2(moveImput * moveSpeed, rb.velocity.y);
+                moveTrail.emitting = false;
                 //if moveimput is less than 0 (-1), and the player is facing right, then the player will flip
                 if (moveImput < 0 && facingRight)
                 {
@@ -134,6 +137,7 @@ public class ThisPlayer: MonoBehaviour
             if (isDashing)
             { 
                 rb.velocity = dashingDirection.normalized * dashingSpeed;
+                moveTrail.emitting = true;
             }
         }
     }
